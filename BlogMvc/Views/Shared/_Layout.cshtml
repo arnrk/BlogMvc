@@ -4,22 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BlogMvc</title>
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/SiteStyleSheet.css" />
     
 </head>
 <body>
-    <nav>
+    <nav class="nav">
+        <a class="nav" href="~/">Home</a>
+        <a class="nav" href="~/Post/Index">All Articles</a>
+        <a class="nav" href="~/Home/Contact">Contact</a>
     </nav>
 
-    
+
 
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - Blog</p>
+            <p>&copy; 2019 - WebDisplay</p>
         </footer>
     </div>
+
 
 </body>
 </html>
