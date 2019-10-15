@@ -16,5 +16,15 @@ namespace BlogMvc.Tests
 
             Assert.IsType<ViewResult>(result);
         }
+
+        [Fact]
+        public void Contact_Index_Returns_A_View()
+        {
+            var underTest = new HomeController();
+
+            var result = underTest.Index();
+
+            Assert.IsType<ViewResult>(result);
+        }
     }
 }
