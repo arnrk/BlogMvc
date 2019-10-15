@@ -8,29 +8,19 @@ namespace BlogMvc.Controllers
 {
     public class PostController : Controller
     {
-        public ViewResult Index(int ID, string Title, string Body, string Image, string Author)
+        public ViewResult Index()
         {
-            var model = new PostModel();
-            model.ID = 32;
-            model.Title = "Best Blog Ever";
-            model.Body = "I have never read such engaging material";
-            model.Image = "Some Cool Image";
-            model.Author = "Joe Smith";
+            
 
-            return View(model);
+            return View();
 
         }
 
-        public ViewResult Details(int ID, string Title, string Body, string Image, string Author)
+        public ViewResult Details()
         {
-            var model = new PostModel();
-            model.ID = 32;
-            model.Title = "Best Blog Ever";
-            model.Body = "I have never read such engaging material";
-            model.Image = "Some Cool Image";
-            model.Author = "Joe Smith";
+           
 
-            return View(model);
+            return View();
         }
 
     }
