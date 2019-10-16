@@ -14,14 +14,24 @@ namespace BlogMvc.Models
         public string Author { get; set; }
         //[DisplayFormat(DataFormatString = "{0:15 OCT 2019}")]
         public int DateTime { get; set; }
+        public virtual int CategoryID { get; set; }
+        public virtual CategoryModel Categories { get; set; }
+        public virtual int TagID { get; set; }
+        public virtual TagModel Tags { get; set; }
 
-        public PostModel(int id, string title, string body, string image, string author )
+        public virtual ICollection<PostModel> Posts { get; set; }
+
+        public PostModel(int id, string title, string body, string image, string author, int categoryID, int tagID, ICollection<PostModel> Posts)
         {
             ID = id;
             Title = title;
             Body = body;
             Image = image;
             Author = author;
+            CategoryID = categoryID;
+            TagID = tagID;
+
+
 
         }
 

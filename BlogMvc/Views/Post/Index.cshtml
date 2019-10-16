@@ -1,9 +1,21 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model BlogMvc.Models.PostModel
+@{
+
+    ViewData["Title"] = "Index";
 }
 
 
 <div>
+    <br />
+    <h2>Posts Index Page</h2>
+
+    <h2>All Articles</h2>
+    <p>Title: <span>@Model.Title</span></p>
+    <p>Author: <span>@Model.Author</span></p>
+    @*<p>Posted: <span>@Model.Posted</span></p>*@
+    <img src="href">
+    @*<p>Article: <span>@Model.Article</span></p>*@
+    <p>ID: <span>@Model.ID</span></p>
     <div class="item">
         <img src="~/images/.jpg" alt="Cover" />
 
