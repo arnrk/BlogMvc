@@ -39,6 +39,15 @@ namespace BlogMvc.Controllers
             return View(model);
         }
 
+        public ViewResult Create(int id)
+        {
+
+            var model = postrepo.GetByID(id);
+            return View(model);
+        }
+
+       
+
         [HttpPost]
         public ActionResult Create(PostModel post)
         {
@@ -64,7 +73,7 @@ namespace BlogMvc.Controllers
         public ActionResult Delete(PostModel post)
         {
             postrepo.Delete(post);
-            return RedirectToAction("Details");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ViewResult Edit(int id)
@@ -77,7 +86,7 @@ namespace BlogMvc.Controllers
         public ActionResult Edit(PostModel post)
         {
             postrepo.Edit(post);
-            return RedirectToAction("Details");
+            return RedirectToAction("Index");
         }
 
 

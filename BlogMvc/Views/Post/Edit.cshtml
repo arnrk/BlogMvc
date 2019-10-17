@@ -1,18 +1,18 @@
 ﻿@model BlogMvc.Models.PostModel
-@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
-    ViewData["Title"] = "Create a Post";
+    ViewData["Title"] = "Edit";
 }
-<br />
-<h2>Create</h2>
+
+<h2>Edit</h2>
 
 <h4>PostModel</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
@@ -34,10 +34,7 @@
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Categories" class="control-label"></label>
-                <select name="CategoryID">
-                    <option value="1">Fun</option>
-                </select>
+                <label asp-for="CategoryID" class="control-label"></label>
                 <input asp-for="CategoryID" class="form-control" />
                 <span asp-validation-for="CategoryID" class="text-danger"></span>
             </div>
@@ -47,7 +44,7 @@
                 <span asp-validation-for="TagID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>
     </div>
