@@ -1,28 +1,23 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using BlogMvc.Models;
 
 namespace BlogMvc.Controllers
 {
-    public class HomeController : Controller
+    public class CategoryController : Controller
     {
-        
         public ViewResult Index()
         {
             return View();
         }
 
-        
-
-        public ViewResult Contact()
+        public ViewResult Details()
         {
             return View();
         }
 
+
     }
 }
-

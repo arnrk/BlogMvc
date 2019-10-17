@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BlogMvc.Models.PostModel>
+@{
+
+    ViewData["Title"] = "Index";
+}
+
+
+<div>
+    <br />
+    <h2>Posts Index Page</h2>
+
+    <h2>All Articles</h2>
+    @foreach (var post in Model)
+    {
+        <p>Title: <span>@post.Title</span></p>
+        <p>Author: <span>@post.Author</span></p>
+
+        <img src="@post.Image" />
+        <p>Article: <span>@post.Body</span></p>
+        <p>ID: @post.ID</p>
+        <a href="/Post/Details/@post.ID">Article Details</a>
+    }
+    </div>
