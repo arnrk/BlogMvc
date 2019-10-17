@@ -9,7 +9,9 @@ namespace BlogMvc.Models
     {
         public int ID { get; set; }
         public string CategoryName { get; set; }
-        public string CategoryPost { get; set; }
+        
+
+        public virtual ICollection<PostModel> Posts { get; set; }
 
         public CategoryModel()
         {
@@ -20,7 +22,7 @@ namespace BlogMvc.Models
         {
             ID = id;
             CategoryName = categoryName;
-            CategoryPost = categoryPost;
+            
         }
 
     }
