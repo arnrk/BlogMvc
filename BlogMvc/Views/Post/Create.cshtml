@@ -37,18 +37,18 @@
             <div class="form-group">
                 <label asp-for="Categories" class="control-label"></label>
                 <select name="CategoryID">
-                    <option value="1">Fun</option>
-                    <option value="2">Sun</option>
-                    <option value="3">Food</option>
-                    <option value="4">Summer</option>
+                    <option value="1">Freddie Kitchens</option>
+                    <option value="2">Baker Mayfield</option>
+                    <option value="3">Nick Chubb</option>
+                    <option value="4">2019 Schedule</option>
                     
                 </select>
-                <input asp-for="CategoryID" class="form-control" />
-                <span asp-validation-for="CategoryID" class="text-danger"></span>
+                @*<input asp-for="CategoryID" class="form-control" />
+                <span asp-validation-for="CategoryID" class="text-danger"></span>*@
             </div>
             <div class="form-group">
-                <label asp-for="TagID" class="control-label"></label>
-                <input asp-for="TagID" class="form-control" />
+                @*<label asp-for="TagID" class="control-label"></label>*@
+                <input asp-for="TagID" class="form-control" type="hidden" />
                 <span asp-validation-for="TagID" class="text-danger"></span>
             </div>
             <div class="form-group">
