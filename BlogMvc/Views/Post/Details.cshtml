@@ -2,6 +2,23 @@
 @{
     ViewData["Title"] = "Details";
 }
+<div>
+    <br />
+    <h2>Posts Details Page</h2>
 
-<h2>Details</h2>
+    <h2>Article</h2>
+    
+        <p>Title: <span>@Model.Title</span></p>
+        <p>Author: <span>@Model.Author</span></p>
+        <img src="@Model.Image" />
+        <p>Article: <span>@Model.Body</span></p>
+        <p>Post Number: @Model.ID</p>
+        <p>Category: @Model.CategoryID</p>
+        <a href="/Post/Index">Back To All Articles</a>
+        <a href="/Post/Edit/@Model.ID">Edit Post</a>
+        <a href="/Post/Delete/@Model.ID">Delete Post</a>
 
+    
+
+
+</div>
