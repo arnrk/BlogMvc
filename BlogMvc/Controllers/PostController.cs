@@ -13,7 +13,7 @@ namespace BlogMvc.Controllers
     {
         IRepository<PostModel> postrepo;
 
-        public object PostModelID { get; private set; }
+        //public object PostModelID { get; private set; }
 
         public PostController(IRepository<PostModel>postrepo)
         { this.postrepo = postrepo; }
@@ -52,7 +52,7 @@ namespace BlogMvc.Controllers
         public ActionResult Create(PostModel post)
         {
             postrepo.Create(post);
-            return RedirectToAction("Details");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

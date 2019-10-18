@@ -44,7 +44,8 @@ namespace BlogMvc.Models
 
         }
 
-        
-
+        public PostModel(int v1, string v2, string v3, string v4, string v5, int v6, int v7)
+        {
+        }
     }
 }
