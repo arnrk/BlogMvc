@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BlogMvc.Models
 {
@@ -13,17 +11,13 @@ namespace BlogMvc.Models
         public string Body { get; set; }
         public string Image { get; set; }
         public string Author { get; set; }
-
-
-        //[DisplayFormat(DataFormatString = "{0:15 OCT 2019}")]
-        //public DateTime Date { get; set; }
+        public DateTime Date { get; set; }
 
         public int CategoryID { get; set; }
         public virtual CategoryModel Categories { get; set; }
         public int TagID { get; set; }
         public virtual TagModel Tags { get; set; }
 
-        //public virtual ICollection<PostModel> Posts { get; set; }
 
         public PostModel()
         {
@@ -37,10 +31,9 @@ namespace BlogMvc.Models
             Body = body;
             Image = image;
             Author = author;
+            Date = DateTime.Now;
             CategoryID = categoryID;
             TagID = tagID;
-
-
 
         }
 

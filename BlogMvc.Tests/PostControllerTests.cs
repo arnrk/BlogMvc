@@ -20,7 +20,7 @@ namespace BlogMvc.Tests
             
             public PostControllerTests()
             {
-                posttest = new PostModel(21, "Post Name", "Body", "Img", "Author", 1, 6);
+                posttest = new PostModel(21, "Post Name", "Body", "Img", "Author", 1, 1);
                 postrepo = Substitute.For<IRepository<PostModel>>();
                 underTest = new PostController(postrepo);
 
