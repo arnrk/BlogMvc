@@ -18,26 +18,32 @@
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Body" class="control-label"></label>
-                <input asp-for="Body" class="form-control" />
+                <textarea name="Body" rows="5" cols="60" class="form-control"></textarea>
+                @*<input asp-for="Body" class="form-control" rows="25" />*@
                 <span asp-validation-for="Body" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Image" class="control-label"></label>
                 <input asp-for="Image" class="form-control" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Author" class="control-label"></label>
                 <input asp-for="Author" class="form-control" />
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
                 <input asp-for="Date" class="form-control" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Categories" class="control-label"></label>
                 <select name="CategoryID">
@@ -55,6 +61,7 @@
                 <input asp-for="TagID" class="form-control" type="hidden" />
                 <span asp-validation-for="TagID" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>

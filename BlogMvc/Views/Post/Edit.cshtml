@@ -5,7 +5,7 @@
 }
 
 <br />
-<h2>Edit</h2>
+<h2>Edit Article</h2>
 
 <hr />
 <div class="row">
@@ -18,31 +18,38 @@
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Body" class="control-label"></label>
-                <input asp-for="Body" class="form-control" />
+                <textarea name="Body" rows="5" cols="60" class="form-control"></textarea>
+                @*<input asp-for="Body" class="form-control" />*@
                 <span asp-validation-for="Body" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Image" class="control-label"></label>
                 <input asp-for="Image" class="form-control" />
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Author" class="control-label"></label>
                 <input asp-for="Author" class="form-control" />
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 @*<label asp-for="CategoryID" class="control-label"></label>
                 <input asp-for="CategoryID" class="form-control" />*@
                 <span asp-validation-for="CategoryID" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 @*<label asp-for="TagID" class="control-label"></label>*@
                 <input asp-for="TagID" class="form-control" type="hidden" />
                 <span asp-validation-for="TagID" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
