@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BlogMvc.Models;
+﻿using BlogMvc.Models;
 using BlogMvc.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,24 +9,16 @@ namespace BlogMvc.Controllers
     {
         IRepository<PostModel> postrepo;
 
-        public object PostModelID { get; private set; }
-
         public PostController(IRepository<PostModel>postrepo)
         { this.postrepo = postrepo; }
-
-
-        
 
 
         public ViewResult Index()
         {
             var model = postrepo.GetAll();
-
             return View(model);
 
         }
-
-        
 
         public ViewResult Details(int id)
         {
@@ -39,11 +27,19 @@ namespace BlogMvc.Controllers
             return View(model);
         }
 
+        public ViewResult Create(int id)
+        {
+
+            var model = postrepo.GetByID(id);
+            return View(model);
+        }
+
+
         [HttpPost]
         public ActionResult Create(PostModel post)
         {
             postrepo.Create(post);
-            return RedirectToAction("Details");
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -64,7 +60,7 @@ namespace BlogMvc.Controllers
         public ActionResult Delete(PostModel post)
         {
             postrepo.Delete(post);
-            return RedirectToAction("Details");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ViewResult Edit(int id)
@@ -77,7 +73,7 @@ namespace BlogMvc.Controllers
         public ActionResult Edit(PostModel post)
         {
             postrepo.Edit(post);
-            return RedirectToAction("Details");
+            return RedirectToAction("Index");
         }
 
 

@@ -5,19 +5,27 @@
 }
 
 
-<div>
+<div id="detail">
     <br />
-    <h2>Posts Index Page</h2>
-
     <h2>All Articles</h2>
     @foreach (var post in Model)
     {
-        <p>Title: <span>@post.Title</span></p>
-        <p>Author: <span>@post.Author</span></p>
+        <article>
+            <p>Title: <span>@post.Title</span></p>
+            <p>Author: <span>@post.Author</span></p>
+            <img src="@post.Image" />
+            <p>Post Number: @post.ID</p>
+            <p> Date Published: @post.Date</p>
+            <p>Category: @post.CategoryID</p>
+            
+            <button>
+                <a href="/Post/Details/@post.ID">Article Details</a>
+            </button>
+    <br />
+    <hr />
+</article>
 
-        <img src="@post.Image" />
-        <p>Article: <span>@post.Body</span></p>
-        <p>ID: @post.ID</p>
-        <a href="/Post/Details/@post.ID">Article Details</a>
     }
-    </div>
+
+
+</div>

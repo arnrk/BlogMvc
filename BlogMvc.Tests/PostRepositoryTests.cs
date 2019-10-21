@@ -33,7 +33,7 @@ namespace BlogMvc.Tests
         {
             var count = underTest.Count();
 
-            Assert.Equal(4, count);
+            Assert.Equal(3, count);
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace BlogMvc.Tests
             underTest.Create(new PostModel() { Title = "This Is Great" });
 
             var count = underTest.Count();
-            Assert.Equal(5, count);
+            Assert.Equal(4, count);
         }
 
         [Fact]
@@ -65,7 +65,7 @@ namespace BlogMvc.Tests
             underTest.Delete(HeroModel);
             var count = underTest.Count();
 
-            Assert.Equal(4, count);
+            Assert.Equal(3, count);
         }
 
         [Fact]
@@ -76,7 +76,7 @@ namespace BlogMvc.Tests
 
             var all = underTest.GetAll();
 
-            Assert.Equal(6, all.Count());
+            Assert.Equal(5, all.Count());
         }
     }
 }
