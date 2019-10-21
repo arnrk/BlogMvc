@@ -2,23 +2,19 @@
 @{
     ViewData["Title"] = "Details";
 }
-<div>
+<div id="articledetails">
     <br />
-    <h2>Posts Details Page</h2>
-
-    <h2>Article</h2>
-    
+    <h2>Article Details Page</h2>
+    <article>
         <p>Title: <span>@Model.Title</span></p>
         <p>Author: <span>@Model.Author</span></p>
         <img src="@Model.Image" />
         <p>Article: <span>@Model.Body</span></p>
         <p>Post Number: @Model.ID</p>
         <p>Category: @Model.CategoryID</p>
-        <a href="/Post/Index">Back To All Articles</a>
-        <a href="/Post/Edit/@Model.ID">Edit Post</a>
-        <a href="/Post/Delete/@Model.ID">Delete Post</a>
-
-    
-
-
+        
+        <button><a href="/Post/Index">Back To All Articles</a></button>
+        <button><a href="/Post/Edit/@Model.ID">Edit Post</a></button>
+        <button><a href="/Post/Delete/@Model.ID">Delete Post</a></button>
+</article>
 </div>
