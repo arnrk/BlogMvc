@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BlogMvc</title>
     <link rel="stylesheet" href="~/css/SiteStyleSheet.css" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav class="nav">
+    @*<nav class="nav">
         <a class="nav" href="~/">Home</a>
         <a class="nav" href="~/Post/Index">All Articles</a>
         <a class="nav" href="~/Post/Create">Create a Post</a>
         <a class="nav" href="~/Home/Contact">Contact</a>
 
-    </nav>
+    </nav>*@
 
+    <div class="navbar">
+        <a class="active" href="~/"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="~/Post/Index"><i class="fa fa-fw fa-list"></i> All Articles</a>
+        <a href="~/Post/Create"><i class="fa fa-pencil fa-fw"></i> Create a Post</a>
+        <a href="~/Home/Contact"><i class="fa fa-fw fa-envelope"></i> Meet The Team</a>
+
+    </div>
 
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - WebDisplay</p>
-        </footer>
     </div>
+
+        <div class="footer">
+            <p>&copy; 2019 - Utility Infielders Inc.</p>
+        </div>
 
 
 </body>
